@@ -99,5 +99,10 @@ async def rank(ctx):
         text += f"{i}位：<@{user_id}>   {score}回\n"
 
     await ctx.send(text)
+    
+@bot.command()
+async def stop(ctx):
+    await ctx.send("Bot停止します")
+    await bot.close()    
 
 bot.run(os.getenv("TOKEN"))
